@@ -1,8 +1,8 @@
 # Docker Network Tools
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/jonlabelle/network-tools.svg)][dockerhub]
+Based off [`jonlabelle/docker-network-tools`](https://github.com/jonlabelle/docker-network-tools)
 
-> A Docker image with various network tools pre-installed.
+> A Docker image with various network tools pre-installed + HTTP tools for load testing and more
 
 ## Installed Tools
 
@@ -95,23 +95,28 @@
     - `w` - Report logged in users and what they are doing.
     - `watch` - Execute a program periodically, showing output full-screen.
 
-## Resources
-
-- [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
-- [Dockerfile](https://github.com/jonlabelle/docker-network-tools/blob/master/Dockerfile) on GitHub
+**Additional HTTP tools**
+ - [wrk](https://github.com/wg/wrk) - modern HTTP benchmarking tool capable of generating significant load when run on a single multi-core CPU
+ - [wrk2](https://github.com/giltene/wrk2) - wrk2 is wrk modifed to produce a constant throughput load, and accurate latency
+ - [vegeta](https://github.com/tsenart/vegeta) - ersatile HTTP load testing tool built out of a need to drill HTTP services with a constant request rate
+ - [fortio](https://github.com/fortio/fortio) - started as, and is, Istio's load testing tool and now graduated to be its own project
+ - [testssl.sh](https://testssl.sh/) - tool which checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as recent cryptographic flaws and more.
+ - [httpie](https://httpie.io/) - HTTP client for the API era
 
 ## Usage
 
 To run an interactive Bash session in the container from your terminal and start using the tools:
 
 ```bash
-docker run --rm -it jonlabelle/network-tools
+docker run --rm -it armsultan/network-tools
 ```
 
 > **NOTE** `-rm` automatically removes the container upon exiting. See [Docker run reference] for more options.
 
-## Also see
+## Resources and other useful tools
 
+- [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
+- [Dockerfile](https://github.com/jonlabelle/docker-network-tools/blob/master/Dockerfile) on GitHub
 - [jonlabelle/nmap](https://hub.docker.com/r/jonlabelle/nmap) - Minimal Docker image with Nmap Network Security Scanner pre-installed.
 
 [dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
