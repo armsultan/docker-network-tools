@@ -105,19 +105,43 @@ Based off [`jonlabelle/docker-network-tools`](https://github.com/jonlabelle/dock
 
 ## Usage
 
-To run an interactive Bash session in the container from your terminal and start using the tools:
+Run an interactive Bash session in the container from your terminal and start using the tools:
 
 ```bash
 docker run --rm -it armsultan/network-tools
 ```
 
-> **NOTE** `-rm` automatically removes the container upon exiting. See [Docker run reference] for more options.
+> **NOTE** `-rm` automatically removes the container upon exiting. See [[Docker run reference](https://docs.docker.com/engine/reference/run/) for more options.
+
+**Optional:** If you would like to modify the Dockerfile then rebuild the Image, run:
+
+```bash
+# Build from Dockerfile:
+docker build -t network-tools .
+```
+
+**Optional:** Setup Aliases to run commands from a the container.
+
+For example, to run the HTTP tools using the alias instead of the `docker run` command:
+
+```bash 
+# HTTPIE
+alias http='docker run --rm -it armsultan/network-tools http'
+# WRK
+alias wrk='docker run --rm -it armsultan/network-tools wrk'
+# WRK2
+alias wrk2='docker run --rm -it armsultan/network-tools wrk2'
+# VEGETA
+alias vegeta='docker run --rm -it armsultan/network-tools vegeta'
+# FORTIO
+alias fortio='docker run --rm -it armsultan/network-tools fortio'
+# testssl.sh
+alias testssl.sh='docker run --rm -ti armsultan/network-tools testssl.sh'
+```
 
 ## Resources and other useful tools
 
 - [jonlabelle/network-tools](https://hub.docker.com/r/jonlabelle/network-tools) on Docker Hub
 - [Dockerfile](https://github.com/jonlabelle/docker-network-tools/blob/master/Dockerfile) on GitHub
 - [jonlabelle/nmap](https://hub.docker.com/r/jonlabelle/nmap) - Minimal Docker image with Nmap Network Security Scanner pre-installed.
-
-[dockerhub]: https://hub.docker.com/r/jonlabelle/network-tools
-[Docker run reference]: https://docs.docker.com/engine/reference/run/
+- [Docker run reference](https://docs.docker.com/engine/reference/run/)
