@@ -103,7 +103,7 @@ Based off [`jonlabelle/docker-network-tools`](https://github.com/jonlabelle/dock
  - [testssl.sh](https://testssl.sh/) - tool which checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as recent cryptographic flaws and more.
  - [httpie](https://httpie.io/) - HTTP client for the API era
 
-**Note:** `wrk` and `wrk2` not available on `linux/arm64`,`linux/arm/v7` builds. Coudlnt get that installed :(
+**Note:** `wrk` and `wrk2` not available on `linux/arm64`,`linux/arm/v7` builds. Could not get those installed :(
 
 ## Usage
 
