@@ -50,11 +50,11 @@ RUN set -x \
     && apk --update add --virtual build-dependencies alpine-sdk openssl-dev zlib-dev cmake python3 cmd:pip3 g++ make \
     util-linux gcompat git ca-certificates py-pip py3-six \
     # wrk2    - https://github.com/giltene/wrk2
-        && cd /tmp \
-        && git clone https://github.com/giltene/wrk2.git \
-        && cd /tmp/wrk2 \
-        && make \
-        && cp wrk /bin/wrk2 \
+        # && cd /tmp \
+        # && git clone https://github.com/giltene/wrk2.git \
+        # && cd /tmp/wrk2 \
+        # && make \
+        # && cp wrk /bin/wrk2 \
     # vegeta - https://github.com/tsenart/vegeta
         && wget -q "https://github.com/tsenart/vegeta/releases/download/v${VEGETA_VERSION}/vegeta_${VEGETA_VERSION}_linux_amd64.tar.gz" -O /tmp/vegeta.tar.gz \
         && tar xzf /tmp/vegeta.tar.gz -C /bin \
@@ -69,7 +69,7 @@ RUN set -x \
     # wrk     - https://github.com/wg/wrk
         && apk --update add \
             httpie \
-            wrk \
+            # wrk \
     # Clear apk cache and clean up!
         && rm -rf /var/cache/apk/* \
         && apk del build-dependencies \

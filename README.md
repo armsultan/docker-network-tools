@@ -14,7 +14,7 @@ Based off [`jonlabelle/docker-network-tools`](https://github.com/jonlabelle/dock
 - [`iperf`](https://sourceforge.net/projects/iperf2/) - A tool to measure IP bandwidth using UDP or TCP.
 - [`jq`](https://stedolan.github.io/jq/) - A lightweight and flexible command line JSON processor.
 - [`libidn`](https://www.gnu.org/software/libidn) - Encode/Decode library for internationalized domain names.
-- [`libressl`](https://www.libressl.org) - Version of the TLS/crypto stack forked from OpenSSL.
+- ~~[`libressl`](https://www.libressl.org) - Version of the TLS/crypto stack forked from OpenSSL.~~
 - [`macchanger`](https://github.com/alobbs/macchanger) - A utility for viewing/manipulating the MAC address of network interfaces.
 - [`netcat`](https://packages.debian.org/sid/netcat-openbsd) - The TCP/IP swiss army knife (OpenBSD variant).
 - [`ngrep`](https://github.com/jpr5/ngrep/) - A grep-like utility that allows you to search for network packets on an interface.
@@ -102,6 +102,8 @@ Based off [`jonlabelle/docker-network-tools`](https://github.com/jonlabelle/dock
  - [fortio](https://github.com/fortio/fortio) - started as, and is, Istio's load testing tool and now graduated to be its own project
  - [testssl.sh](https://testssl.sh/) - tool which checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as recent cryptographic flaws and more.
  - [httpie](https://httpie.io/) - HTTP client for the API era
+
+**Note:** `wrk` and `wrk2` not available on `linux/arm64`,`linux/arm/v7` builds. Coudlnt get that installed :(
 
 ## Usage
 
